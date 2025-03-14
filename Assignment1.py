@@ -36,14 +36,24 @@ def list_choices():
         print(f"{num}. {x}")
 
 def request_input():
-    # request choice as an int
-    try:
-        currency = input("Please enter your choice of currency (1-6): ")
-        # error handling to go here WIP
-    except:
-        print(f"Invalid input. Please provide only a number between 1-6")
-    else:
-        return currency
+    # keeps asking for input until no errors are triggered
+    while True:
+        try:
+            # request input and cast to an int
+            # if input cannot be converted to an int (ex. it contains letters) a ValueError will occur
+            request = int(input("Please enter your choice of currency (1-6): ")) 
+           
+            # if request is not within 1-6 raise the IndexError
+            if request not in range (1, 6): 
+                raise IndexError
+            # if no errors were triggered break out of loop
+            break
+        except IndexError:
+            print("Invalid option. Enter a number within list. (1-6)")
+        except ValueError:
+            print("Enter only the numeric value without additional characters.")
+    # returns the request as an int
+    return request
 
 def process_input(input):
     # code to echo choice
