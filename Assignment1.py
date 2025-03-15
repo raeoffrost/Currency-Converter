@@ -61,7 +61,7 @@ def request_input():
 
 def process_input(input):
     # echoes user input and displays it
-    print(f"Your choice: {rateNames[input -1]}") #Displays chosen currency name
+    print(f"Your choice #{input}: {rateNames[input -1]}") #Displays chosen currency name
     converted_amount = convert_currency(exchangeRates[input - 1])  # Get the exchange rate
     convert_currency(input) #Converting the currency
     print(f"${USD} USD is equal to {converted_amount:.2f} {rateNames[input - 1]}")  # Display result
