@@ -2,12 +2,13 @@
 
 #note(delete once completed): Zainab please add inline comments to your sections of code. Thanks!
 
+# Function for greeting the user and getting their name
 def greeting_message():
     userName = input("Please Enter your Name: ")
     print(f"Welcome to Currency Converter {userName}!")
     return userName
 
-
+# Function for exit message
 def exit_message(name):
     print(f"Thank you for Using Currency Converter")
     print(f"Have a Wonderful Day {name}")
@@ -15,6 +16,9 @@ def exit_message(name):
 # Exchange Rates
 # Australian Dollar, Brazilian Real, European Euro, Indian Rupee, Japanese Yen, Mexican Peso
 AUD, BRL, EUR, INR, JPY, MXN = 1.58872, 5.78991, 0.922317, 86.9736, 148.586, 20.1058
+
+# List of exchange rates corresponding to rateNames
+exchangeRates = [AUD, BRL, EUR, INR, JPY, MXN]
 
 # Rate Names list
 rateNames = ["Australian Dollar", "Brazilian Real", "European Euro", "Indian Rupee", "Japanese Yen", "Mexican Peso"]
@@ -57,12 +61,13 @@ def request_input():
 
 def process_input(input):
     # echoes user input and displays it
-    print("Your choice:", input)
-    # code to process input here
-    convert_currency(input)
-    # code to print result
+    print(f"Your choice: {rateNames[input -1]}") #Displays chosen currency name
+    converted_amount = convert_currency(exchangeRates[input - 1])  # Get the exchange rate
+    convert_currency(input) #Converting the currency
+    print(f"${USD} USD is equal to {converted_amount:.2f} {rateNames[input - 1]}")  # Display result
 
 def main():
+    # Greeting User and getting their name
     userName = greeting_message()
 
     # show options
@@ -74,6 +79,7 @@ def main():
     # process request 
     process_input(input)
 
+    # Exit message for User
     exit_message(userName)
 
 #run the program
