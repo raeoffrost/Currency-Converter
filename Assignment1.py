@@ -1,4 +1,4 @@
-#Names: Zainab Aamir, Abby Friesen, Mark
+#Names: Zainab Aamir, Abby Friesen, Mark Vu Nguyen
 
 #note(delete once completed): Zainab please add inline comments to your sections of code. Thanks!
 
@@ -56,7 +56,8 @@ def request_input():
     return request
 
 def process_input(input):
-    # code to echo choice
+    # echoes user input and displays it
+    print("Your choice:", input)
     # code to process input here
     convert_currency(input)
     # code to print result
