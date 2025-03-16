@@ -1,7 +1,5 @@
 #Names: Zainab Aamir, Abby Friesen, Mark Vu Nguyen
 
-#note(delete once completed): Zainab please add inline comments to your sections of code. Thanks!
-
 # Function for greeting the user and getting their name
 def greeting_message():
     userName = input("Please Enter your Name: ")
