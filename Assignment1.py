@@ -6,6 +6,13 @@ def greeting_message():
     print(f"Welcome to Currency Converter {userName}!")
     return userName
 
+def list_choices():
+    # Print currency options by looping over rateNames list
+    num = 0
+    for x in rateNames:
+        num += 1
+        print(f"{num}. {x}")
+
 # Function for exit message
 def exit_message(name):
     print(f"Thank you for Using Currency Converter")
@@ -29,13 +36,6 @@ USD = 100
 def convert_currency(rate):
     # $100 USD in X is...
     return USD * rate
-
-def list_choices():
-    # Print currency options by looping over rateNames list
-    num = 0
-    for x in rateNames:
-        num += 1
-        print(f"{num}. {x}")
 
 def request_input():
     # keeps asking for input until no errors are triggered
