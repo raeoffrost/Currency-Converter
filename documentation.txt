@@ -1,0 +1,17 @@
+Names: Zainab Aamir, Abby Friesen, Mark Vu Nguyen
+
+Date: 3/14/2025
+
+Affiliation: Humber Polytechnic
+
+Description:
+	This Python program serves as a currency converter, it gives users the ability to convert $100 USD into different currencies using exchange rates. The program begins by greeting the user, asks them to choose a currency, and then displays the converted amount in the selected currency.
+
+Inputs:
+- The user is asked to enter their name.
+- The program then presents a list of currencies, and the user is asked to choose one (by entering a number between 1 and 6).
+
+Outputs:
+- The program calculates and shows how much $100 USD is worth in the chosen currency.
+- The program greets the user's name in the beginning.
+- At the end, the program displays a goodbye message for the user.
